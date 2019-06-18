@@ -16,12 +16,12 @@ header{
     height:150px;
     width: 80%;
     border: 1px solid black;
-    font-size: 80px;
+    font-size: 3em;
     text-align: center;
     margin: 15px auto;
 
 }
-.rightGuess{
+.rightguess{
     height:150px;
     width: 80%;
     border: 1px solid black;
@@ -30,7 +30,7 @@ header{
     margin: 15px auto;
 
 }
-.wrongGuess{
+.wrongguess{
     height:150px;
     width: 80%;
     border: 1px solid black;

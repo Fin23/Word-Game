@@ -8,9 +8,13 @@ let choosenWord = words[randNum];
 let rightWord = [];
 let wrongWord = [];
 let underScore = [];
+var wins = 0;
+var loss = 0;
 
 // Dom manipulation
 let docUnderScore = document.getElementsByClassName('underscore');
+let docRightGuess = document.getElementsByClassName('rightguess');
+let docWrongGuess = document.getElementsByClassName('wrongguess');
 
 //main
 //==========================================================
@@ -22,8 +26,6 @@ let generateUnderscore = () => {
     }
     return underScore;
 }
-
-
 //get users guess
 // using key code/ index of method
 document.addEventListener('keypress', (event) => {
@@ -32,9 +34,10 @@ document.addEventListener('keypress', (event) => {
     if(choosenWord.indexOf(keyword) > -1){
         //add to right words array
         rightWord.push(keyword);
-        docUnderScore[0].innerHTML = underScore.join('');
         //replace underscore with right letter
 underScore[choosenWord.indexOf(keyword)] = keyword;
+docUnderScore[0].innerHTML = underScore.join('  ');
+docRightGuess[0].innerHTML = rightWord;
 //checks to see if user word matches guesses
 if(underScore.join('') == choosenWord){
     alert('Winner Winner Chicken Dinner');
@@ -42,10 +45,14 @@ if(underScore.join('') == choosenWord){
 }
     else {
         wrongWord.push(keyword);
+        docWrongGuess[0].innerHTML = wrongWord;
     }
-    console.log(choosenWord)
-    console.log(underScore)
-
 });
 
-//ocument.getElementById("underscore").innerHTML = "generateUnderscore"
+
+//tyring to manipulate the html text 
+
+
+
+
+
