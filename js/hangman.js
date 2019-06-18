@@ -3,13 +3,14 @@
 //create an array of words
 const words = ['Rockos Modern Life', 'Ren and Stimpy', 'Aaahh! Real Monsters', 'Doug', 'Gargoyles', 'Hey Arnold', 'Doug', 'Darkwing Duck', 'daria', 'Pinky and The Brain']
 //choose word randomly
-let randNum = Math.floor(Math.random() * words.length);
-let choosenWord = words[randNum];
-let rightWord = [];
-let wrongWord = [];
-let underScore = [];
 var wins = 0;
 var loss = 0;
+var randNum = Math.floor(Math.random() * words.length);
+var choosenWord = words[randNum];
+var rightWord = [];
+var wrongWord = [];
+var underScore = [];
+
 
 // Dom manipulation
 let docUnderScore = document.getElementsByClassName('underscore');
