@@ -17,6 +17,27 @@ header{
     margin: 15px auto;
     background-color: #df19c1;
 }
+.wins{
+    float:left;
+    font-size: 1.6em;
+
+    
+    padding-left: 40px;
+    border-bottom: black  solid 4px;
+    
+
+}
+.loss{
+    float: right;
+    padding-right: 40px;
+    font-size: 1.6em;
+    border-bottom: black solid 4px;
+
+}
+.welcome{
+    font-size: 1.8em;
+
+}
 .underscore{
     height:150px;
     width: 80%;

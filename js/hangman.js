@@ -16,6 +16,8 @@ var underScore = [];
 var docUnderScore = document.getElementsByClassName('underscore');
 var docRightGuess = document.getElementsByClassName('rightguess');
 var docWrongGuess = document.getElementsByClassName('wrongguess');
+var docWins = document.getElementsByClassName('wins');
+var docLoss = document.getElementsByClassName('loss');
 
 //main
 //==========================================================
@@ -55,17 +57,32 @@ var generateUnderscore = () => {
     
     underScore[choosenWord.indexOf(keyword)] = keyword;
     docUnderScore[0].innerHTML = underScore.join('  ');
-    docRightGuess[0].innerHTML = rightWord;
+    docRightGuess[0].innerHTML = rightWord.join(' ');
     
     //checks to see if user word matches guesses
     
     if(underScore.join('') == choosenWord){
     alert('Winner Winner Chicken Dinner');
+    
+    docWins[0].innerHTML = "wins:" + " " + wins++;
+
+    console.log(choosenWord)
+    
+    let underScore = [];
+    
+    let rightWord = [];
+    let wrongWord = [];
+    docUnderScore[0].innerHTML = underScore.join(' ');
+    docRightGuess[0].innerHTML = rightWord.join(' ');
+    docWrongGuess[0].innerHTML = wrongWord.join(' ');
+    console.log(wins)
+   
     }
+
     }
     else {
     wrongWord.push(keyword);
-    docWrongGuess[0].innerHTML = wrongWord;
+    docWrongGuess[0].innerHTML = wrongWord.join(' ');
     }
     });
     
@@ -73,7 +90,7 @@ var generateUnderscore = () => {
     //tyring to manipulate the html text 
 
     } else{
-        txt = "You pressed Cancel";
+        txt = "Fine, I didn't want you to play anyways ";
     }
     document.getElementById("demo").innerHTML = txt;
 }
