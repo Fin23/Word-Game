@@ -1,7 +1,7 @@
 //Global Variables
 //=============================================================
 //create an array of words
-const words = ['Rockos Modern Life', 'Ren and Stimpy', 'Aaahh! Real Monsters', 'Doug', 'Gargoyles', 'Hey Arnold', 'Doug', 'Darkwing Duck', 'daria', 'Pinky and The Brain']
+var words = ['red', 'blue', 'silver', 'white', 'black', 'brown', 'grey', 'orange', 'tan', 'pink']
 //choose word randomly
 var wins = 0;
 var loss = 0;
@@ -13,45 +13,72 @@ var underScore = [];
 
 
 // Dom manipulation
-let docUnderScore = document.getElementsByClassName('underscore');
-let docRightGuess = document.getElementsByClassName('rightguess');
-let docWrongGuess = document.getElementsByClassName('wrongguess');
+var docUnderScore = document.getElementsByClassName('underscore');
+var docRightGuess = document.getElementsByClassName('rightguess');
+var docWrongGuess = document.getElementsByClassName('wrongguess');
 
 //main
 //==========================================================
 console.log(choosenWord);
-//create underscores based on length of word
-let generateUnderscore = () => {
-    for ( let i = 0; i < choosenWord.length; i++){
-            underScore.push('_');
+
+//create an alert that starts game and generates the underscores 
+function myFunction() {
+    var txt;
+    if (confirm("Press OK to Start")){
+        
+        txt="Start Typing idiot!";
+        //create underscores based on length of word
+
+var generateUnderscore = () => {
+    for ( var i = 0; i < choosenWord.length; i++){
+    underScore.push('_');
     }
     return underScore;
-}
-//get users guess
-// using key code/ index of method
-document.addEventListener('keypress', (event) => {
-    let keyword = String.fromCharCode(event.keyCode);
+    }
+    generateUnderscore();
+    //get users guess
+    // using key code/ index of method
+    
+    document.addEventListener('keypress', (event) => {
+       
+    var keyword = String.fromCharCode(event.keyCode);
+    
     //if users guess is right 
+    
     if(choosenWord.indexOf(keyword) > -1){
-        //add to right words array
-        rightWord.push(keyword);
-        //replace underscore with right letter
-underScore[choosenWord.indexOf(keyword)] = keyword;
-docUnderScore[0].innerHTML = underScore.join('  ');
-docRightGuess[0].innerHTML = rightWord;
-//checks to see if user word matches guesses
-if(underScore.join('') == choosenWord){
+        
+    //add to right words array
+    
+    rightWord.push(keyword);
+    
+    //replace underscore with right letter
+    
+    underScore[choosenWord.indexOf(keyword)] = keyword;
+    docUnderScore[0].innerHTML = underScore.join('  ');
+    docRightGuess[0].innerHTML = rightWord;
+    
+    //checks to see if user word matches guesses
+    
+    if(underScore.join('') == choosenWord){
     alert('Winner Winner Chicken Dinner');
     }
-}
-    else {
-        wrongWord.push(keyword);
-        docWrongGuess[0].innerHTML = wrongWord;
     }
-});
+    else {
+    wrongWord.push(keyword);
+    docWrongGuess[0].innerHTML = wrongWord;
+    }
+    });
+    
+    
+    //tyring to manipulate the html text 
+
+    } else{
+        txt = "You pressed Cancel";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
 
 
-//tyring to manipulate the html text 
 
 
 

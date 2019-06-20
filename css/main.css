@@ -4,6 +4,10 @@
     background: url(../img/sprite.png);
     background-position: 0px 0px;
 }
+body{
+    background-color: #ff6200;
+    
+}
 header{
     height:300px;
     width: 80%;
@@ -11,31 +15,40 @@ header{
     font-size: 20px;
     text-align: center;
     margin: 15px auto;
+    background-color: #df19c1;
 }
 .underscore{
     height:150px;
     width: 80%;
     border: 1px solid black;
-    font-size: 3em;
+    font-size: 1.7em;
     text-align: center;
     margin: 15px auto;
+    background-color: #4399de;
 
 }
 .rightguess{
     height:150px;
     width: 80%;
     border: 1px solid black;
-    font-size: 35px;
+    font-size: 100%;
     text-align: center;
     margin: 15px auto;
+    background-color: #23d513;
 
 }
 .wrongguess{
     height:150px;
     width: 80%;
     border: 1px solid black;
-    font-size: 35px;
+    font-size: 100%;
     text-align: center;
     margin: 15px auto;
 
+}
+button{
+    color:palevioletred;
+    height: 70px;
+    width: 200px;
+    font-size: 1em;
 }
