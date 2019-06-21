@@ -14,7 +14,7 @@
        
 
 
-<body background="img\rocko.JPG">
+<body  background="img\rocko.JPG">
 
     
  <div class="container">
@@ -24,15 +24,40 @@
             <span class="loss">Loses</span>
            
             
-            <h2>Color's!</h2>
-            <button style="vertical-align: middle" onclick="myFunction()"><span>  Start Game</span></button>
+            <h2 id="display-message">Color's!</h2>
+            <div onclick="myFunction();" class="button"><span>Start</span></div>
+
+
+           <!-- <button style="vertical-align: middle" onclick="buttonClick()"><span>  
+                Start Game</span></button>-->
+
+
             <p id="demo"></p>
      </header>
      <div id ="myForm">
-        <div class="underscore">
-          <h2>_ _ _ _ _ _</h2>
-        </div>
+    <div class="underscore">
+        <!--key stoke counter-->
+        <input type="text" class="nopaste"/>
+        <input type="text" id="countstroke"/>
+        <span id="count"></span>
+        <!--end of counter-->
+        <p>
+            <ul>
+                <li>
+                    hit refresh, can't create new random word 
+                </li>
+                <li>
+                    wins and losses need fix, 
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </p>
+   
     </div>
+    </div>
+
      <div class="rightguess"><h2>right guess</h2></div>
      <div class="wrongguess"><h2>wrong guess</h2></div>
  </div>

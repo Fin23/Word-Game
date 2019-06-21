@@ -79,7 +79,7 @@ header{
     background-color: #efc40e;
 
 }
-button{
+.button {
     color:palevioletred;
     text-align: center;
     height: 70px;
@@ -96,14 +96,14 @@ button{
     margin: 5px;
     
 }
-button span {
+.button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
     
   }
-  button span:after {
+  .button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -113,18 +113,18 @@ button span {
    
   }
   
-  button:hover span:after {
+  .button:hover span:after {
     opacity: 1;
     right: 0;
     background-color: #23d513;
   }
   
-button:hover span {
+.button:hover span {
     background-color: #23d513;
     
     padding-right: 25px;
 }
-button:hover{
+.button:hover{
     background-color: #23d513;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
